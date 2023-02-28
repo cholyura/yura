@@ -1,0 +1,7 @@
+#root {
+  display: flex;
+}
+.login {
+  box-sizing: border-box;
+  position: relative;
+}

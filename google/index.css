@@ -23,7 +23,44 @@ body {
   width: 25px;
   height: 20px;
   color: #9aa0a6;
-  margin-top: 3px;
+}
+.tooltip-wrapper {
+  position: relative;
+}
+.tooltip-wrapper:hover::after {
+  display: block;
+}
+.tooltip-wrapper::after {
+  content: "입력도구";
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  white-space: nowrap;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.tooltip-mike::after {
+  content: "음성검색";
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  white-space: nowrap;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.tooltip-mike {
+  position: relative;
+}
+.tooltip-mike:hover::after {
+  display: block;
 }
 .img-keyboard {
   width: 30px;
@@ -84,6 +121,16 @@ main {
   justify-content: space-between;
   padding: 0px 20px;
 }
+@media screen and(max-width:1000px;) {
+  footer .bottom {
+    justify-content: space-evenly;
+  }
+}
+@media screen and(max-width:800px;) {
+  footer .bottom {
+    flex-direction: column;
+  }
+}
 .round {
   border-radius: 24px;
   border-style: solid;
@@ -98,7 +145,11 @@ main {
 }
 .box1 {
   background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
   font-size: 14px;
   align-items: center;
   margin: 12px;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 36px;
 }
